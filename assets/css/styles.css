@@ -59,11 +59,11 @@ html{
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme{
-  --first-color-send: #161212;
+  --first-color-send: #250c00;
   --title-color: #F3F1F1;
   --text-color: #D1C7C8;
-  --body-color: #251D1E;
-  --container-color: #302728;
+  --body-color: #0c0400;
+  --container-color: #250c00;
 }
 
 /*========== Button Dark/Light ==========*/
@@ -182,6 +182,10 @@ img{
   font-weight: var(--font-semi-bold);
 }
 
+.nav__logo{
+  font-size: 1.4rem;
+}
+
 .nav__logo:hover{
   color: var(--first-color);
 }
@@ -214,9 +218,9 @@ img{
   position: absolute;
   bottom: -.75rem;
   left: 45%;
-  width: 5px;
-  height: 5px;
-  background-color: var(--title-color);
+  width: 8px;
+  height: 8px;
+  background-color: var(--first-color);
   border-radius: 50%;
 }
 
@@ -235,7 +239,7 @@ img{
   align-items: center;
   padding: .3rem;
   background: rgba(218,37,53,.5);
-  border-radius: .4rem;
+  border-radius: 50%;
   z-index: var(--z-tooltip);
   transition: .4s;
   visibility: hidden;
@@ -246,7 +250,7 @@ img{
 }
 
 .scrolltop__icon{
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   color: var(--body-color);
 }
 
@@ -315,12 +319,12 @@ img{
   justify-self: center;
 }
 
-/*########## DECORATION ##########*/
-.decoration__container{
+/*########## NEW ##########*/
+.new_container{
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-.decoration__data{
+.new_data{
   text-align: center;
   padding: 1rem 1rem 2rem;
   background-color: var(--container-color);
@@ -328,26 +332,34 @@ img{
   border-radius: 1rem;
 }
 
-.decoration__data:hover{
+.new_data:hover{
   box-shadow: 0 3px 12px rgba(65,11,16,.15);
 }
 
-.decoration__img{
+.new_img{
   width: 180px;
 }
 
-.decoration__title{
+.new_title{
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-1);
 }
 
-/*########## ACCESSORIES ##########*/
-.accessory__container{
+.more_new{
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: .5rem;
+}
+
+/*########## PRODUCTS ##########*/
+.products_container{
   grid-template-columns: repeat(2,1fr);
   padding-bottom: 2rem;
 }
 
-.accessory__content{
+.products_content{
   position: relative;
   display: grid;
   padding: .25rem .75rem .75rem;
@@ -356,37 +368,38 @@ img{
   border-radius: 1rem;
 }
 
-.accessory__content:hover{
+.products_content:hover{
   box-shadow: 0 3px 12px rgba(65,11,16,.15);
 }
 
-.accessory__img{
+.products_img{
   width: 110px;
   justify-self: center;
   margin-bottom: .25rem;
 }
 
-.accessory__title, .accessory__description{
+.products_title, .products_description{
   text-align: center;
 }
 
-.accessory__title{
+.products_title{
   font-size: var(--normal-font-size);
 }
 
-.accessory__description{
+.products_description{
   font-size: var(--small-font-size);
   margin-bottom: var(--mb-1);
   color: var(--text-color-light);
 }
 
-.accessory__preci{
+.products_preci{
+  align-self: self-end;
   font-size: 22px;
   font-weight: var(--font-semi-bold);
   color: var(--title-color);
 }
 
-.accessory__button{
+.products_button{
   position: absolute;
   top: 0;
   right: 0;
@@ -394,6 +407,17 @@ img{
   font-size: 1.25rem;
   padding: .5rem .625rem;
   border-radius: 0 1rem 0 1rem;
+}
+
+.more_products{
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  align-self: center;
+}
+
+.bx-right-arrow-alt{
+  font-size: 2rem;
 }
 
 /*########## SEND GIFT ##########*/
@@ -486,7 +510,7 @@ footer {
 /*========== For full-screen images on small screens ==========*/
 @media screen and (max-width: 359px){
   .home__img,
-  .share__img,
+  .best_img,
   .send__img{
     width: 100%;
   }
@@ -509,18 +533,18 @@ footer {
   }
 
   .section-title-center,
-  .share__data,
+  .best_data,
   .send__description{
     text-align: initial;
   }
 
   .home__img,
-  .share__img,
+  .best_img,
   .send__img{
     width: 100%;
   }
   
-  .share__img{
+  .best_img{
     order: -1;
   }
 }
@@ -565,25 +589,25 @@ footer {
     padding: 0 2rem;
   }
 
-  .accessory__container{
+  .products_container{
     grid-template-columns: repeat(3,224px);
     justify-content: center;
   }
 
-  .accessory__content{
+  .products_content{
     padding: .5rem 1.5rem 1.5rem;
   }
 
-  .accessory__img{
+  .products_img{
     width: 120px;
     margin-bottom: var(--mb-1);
   }
 
-  .accessory__title, .accessory__description{
+  .products_title, .products_description{
     text-align: initial;
   }
 
-  .accessory__button{
+  .products_button{
     padding: .75rem;
   }
 
@@ -605,7 +629,7 @@ footer {
   }
 
   .home__img,
-  .share__img,
+  .best_img,
   .send__img{
     width: 469px;
   }
