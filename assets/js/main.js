@@ -91,19 +91,20 @@ themeButton.addEventListener('click', () => {
 //#region ########## SCROLL REVEAL ANIMATIONS ##########
 const sr = ScrollReveal({
     distance: '30px',
-    duration: 1800,
+    duration: 1600,
     reset: true,
 });
 
 sr.reveal(`.home__data, .home__img, 
-           .decoration__data,
-           .accessory__content,
+           .new_data,
+           .products_content,
+           .more_products,
            .footer__content`, {
     origin: 'top',
-    interval: 200,
+    interval: 100,
 })
 
-sr.reveal(`.share__img, .send__content`, {
+sr.reveal(`.best_img, .send__content`, {
     origin: 'left'
 })
 
